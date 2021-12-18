@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "awegrupo8-d9b8"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "awegrupo8-d9b8"
+  template:
+    metadata:
+      labels:
+        app: "awegrupo8-d9b8"
+    spec:
+      containers:
+        - name: "awegrupo8-d9b8"
+          image: "grupo08.azurecr.io/awegrupo8"
+          ports:
+          - containerPort: 80
